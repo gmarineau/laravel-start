@@ -10,12 +10,18 @@
   "devDependencies": {
     "admin-lte": "^2.3.11",
     "axios": "^0.15.3",
+    "bootstrap": "^4.0.0-beta.2",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
     "fontawesome": "^4.7.2",
+    "gulp": "^3.9.1",
     "jquery": "^3.1.1",
+    "laravel-elixir": "^6.0.0-16",
     "laravel-mix": "^0.8.3",
     "lodash": "^4.17.4",
     "vue": "^2.1.10"
+  },
+  "dependencies": {
+    "popper.js": "^1.12.9"
   }
 }
