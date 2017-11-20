@@ -28,7 +28,6 @@ elixir(function(mix) {
   .styles([
     '../../../node_modules/font-awesome/css/font-awesome.css',
     '../../../node_modules/bootstrap/dist/css/bootstrap.css',
-    'style.css',
   ], 'public/css/')
   // Compile styles and scripts
   .styles([
@@ -40,8 +39,7 @@ elixir(function(mix) {
   .scripts([
     '../../../node_modules/jquery/dist/jquery.js',
     '../../../node_modules/bootstrap-3/dist/js/bootstrap.js',
-    '../../../node_modules/admin-lte/dist/js/app.js',
-    'script.js',
+    '../../../node_modules/admin-lte/dist/js/adminlte.js',
   ], 'public/js/admin.js')
-  .webpack('vue.js');
+  //.webpack('vue.js');
 });

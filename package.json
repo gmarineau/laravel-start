@@ -17,8 +17,11 @@
     "gulp": "^3.9.1",
     "jquery": "^3.1.1",
     "laravel-elixir": "^6.0.0-16",
+    "laravel-elixir-webpack-official": "^1.0.10",
     "laravel-mix": "^0.8.3",
     "lodash": "^4.17.4",
+    "node-sass": "^4.7.1",
+    "npm-install-version": "^6.0.2",
     "vue": "^2.1.10"
   },
   "dependencies": {

@@ -9,3 +9,8 @@ Homestead.yaml
 .env
 
 .DS_Store
+/public/fonts
+/public/css/*.css
+/public/js/*.js
+/public/css/*.map
+/public/js/*.map
