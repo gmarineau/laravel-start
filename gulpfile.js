@@ -25,6 +25,7 @@ elixir(function(mix) {
     'public/fonts/'
   )
   // Compile styles and scripts
+  .sass('app.scss')
   .styles([
     '../../../node_modules/font-awesome/css/font-awesome.css',
     '../../../node_modules/bootstrap/dist/css/bootstrap.css',
