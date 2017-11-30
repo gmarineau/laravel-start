@@ -26,10 +26,6 @@ elixir(function(mix) {
   )
   // Compile styles and scripts
   .sass('app.scss')
-  .styles([
-    '../../../node_modules/font-awesome/css/font-awesome.css',
-    '../../../node_modules/bootstrap/dist/css/bootstrap.css',
-  ], 'public/css/')
   .scripts([
     '../../../node_modules/jquery/dist/jquery.js',
     '../../../node_modules/popper.js/dist/umd/popper.js',
