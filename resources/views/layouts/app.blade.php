@@ -39,6 +39,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->full_name }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown09">
+                  @if (auth()->user()->hasRole('admin'))
+                    <a href="{{ route('admin.dashboard') }}" class="dropdown-item">Admin</a>
+                  @endif
                   <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
