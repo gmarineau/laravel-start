@@ -26,6 +26,7 @@ class SocialController extends Controller
    */
   public function handleProviderCallback($service)
   {
+    dd(Socialite::driver($service)->user());
     $user = Socialite::driver($service)->user();
   }
 }
