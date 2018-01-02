@@ -38,24 +38,24 @@ return [
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://start.app/login/facebook/callback',
+        'redirect' => env('FACEBOOK_CLIENT_CALLBACK'),
     ],
 
     'twitter' => [
         'client_id' => env('TWITTER_CLIENT_ID'),
         'client_secret' => env('TWITTER_CLIENT_SECRET'),
-        'redirect' => 'http://start.app/login/twitter/callback',
+        'redirect' => env('FACEBOOK_CLIENT_CALLBACK'),
     ],
 
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://start.app/login/google/callback',
+        'redirect' => env('GOOGLE_CLIENT_CALLBACK'),
     ],
 
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => 'http://start.app/login/github/callback',
+        'redirect' => env('GITHUB_CLIENT_CALLBACK'),
     ],
 ];
