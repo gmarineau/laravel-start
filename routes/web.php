@@ -28,4 +28,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     'as' => 'dashboard',
     'uses' => 'DashboardController@index',
   ]);
+  // Users
+  Route::resource('users', 'UsersController');
 });
