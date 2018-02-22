@@ -22,20 +22,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">
-              <i class="fa fa-fw fa-dashboard"></i>
-              <span class="nav-link-text">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
-            <a class="nav-link" href="{{ route('admin.users.index') }}">
-              <i class="fa fa-fw fa-users"></i>
-              <span class="nav-link-text">Users</span>
-            </a>
-          </li>
-        </ul>
+        {!! $Admin->asUl(['class' => 'navbar-nav navbar-sidenav']) !!}
         <ul class="navbar-nav sidenav-toggler">
           <li class="nav-item">
             <a class="nav-link text-center" id="sidenavToggler">
@@ -57,12 +44,7 @@
 
     <div class="content-wrapper">
       <div class="container-fluid">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item {{ active_if('admin.dashboard') }}">
-            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-          </li>
-          @yield('breadcrumb')
-        </ol>
+        @yield('breadcrumb')
         @yield('content')
       </div>
     </div>

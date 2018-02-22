@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 
-@section('breadcrumb')
-  <li class="breadcrumb-item active">
-    <a href="{{ route('admin.users.index') }}">Users</a>
-  </li>
-@stop
+@section('breadcrumb', Breadcrumbs::render('users'))
 
 @section('content')
 

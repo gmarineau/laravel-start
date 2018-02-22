@@ -174,6 +174,8 @@ return [
         Dimsav\Translatable\TranslatableServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Themsaid\Langman\LangmanServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
+        DaveJamesMiller\Breadcrumbs\BreadcrumbsServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -240,6 +242,8 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
+        'Menu' => Lavary\Menu\Facade::class,
+        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facades::class,
     ],
 
 ];
