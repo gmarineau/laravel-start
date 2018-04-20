@@ -6,10 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "fideloper/proxy": "^4.0",
         "cviebrock/eloquent-sluggable": "^4.3",
-        "davejamesmiller/laravel-breadcrumbs": "4.2.0",
-        "dimsav/laravel-translatable": "^8.0",
-        "laravel/framework": "5.5.*",
+        "davejamesmiller/laravel-breadcrumbs": "5.0.0",
+        "dimsav/laravel-translatable": "^9.0",
+        "laravel/framework": "5.6.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.3.0",
@@ -23,7 +24,7 @@
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~7.0"
     },
     "autoload": {
         "classmap": [

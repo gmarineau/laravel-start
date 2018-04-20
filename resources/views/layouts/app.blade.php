@@ -19,14 +19,14 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarsExample09">
+        <div class="collapse navbar-collapse" id="navbars">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             @if (Auth::guest())
               <li class="nav-item">
@@ -37,7 +37,7 @@
               </li>
             @else
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->full_name }}</a>
+                <a class="nav-link dropdown-toggle" href="{{ route('admin.dashboard') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->full_name }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown09">
                   @if (auth()->user()->hasRole('admin'))
                     <a href="{{ route('admin.dashboard') }}" class="dropdown-item">Admin</a>
@@ -62,6 +62,6 @@
       @yield('content')
     </div>
     <!-- JS -->
-    <script src="{{ asset('js/all.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
 </html>

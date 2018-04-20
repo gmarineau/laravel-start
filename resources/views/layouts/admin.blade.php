@@ -32,8 +32,13 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('home') }}">
+              <i class="fa fa-fw fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-              <i class="fa fa-fw fa-sign-out"></i>Logout
+              <i class="fa fa-fw fa-sign-out"></i> Logout
             </a>
             {{ Form::open(['route' => 'logout', 'id' => 'logout-form', 'style' => 'display:none;']) }}
             {{ Form::close() }}

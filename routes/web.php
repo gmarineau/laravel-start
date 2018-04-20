@@ -11,23 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::get('login/{service}', 'Auth\SocialController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\SocialController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['role:admin']], function() {
-  // Dashboard
-  Route::get('/', [
-    'as' => 'dashboard',
-    'uses' => 'DashboardController@index',
-  ]);
-  // Users
+  Route::get('/', 'DashboardController@index')->name('dashboard');
   Route::resource('users', 'UsersController');
 });
