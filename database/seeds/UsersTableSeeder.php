@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
-use App\Models\Role;
-use App\Models\Permission;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class UsersTableSeeder extends Seeder
 {
@@ -20,14 +20,12 @@ class UsersTableSeeder extends Seeder
 
     $admin = new Role();
     $admin->name = 'admin';
-    $admin->display_name = 'role.name.admin';
-    $admin->description  = 'Site Administrator';
+    $admin->guard_name = 'web';
     $admin->save();
     
     $user = new Role();
     $user->name = 'user';
-    $user->display_name = 'role.name.user';
-    $user->description  = 'User with access to logged in areas of the site, but not the admin';
+    $user->guard_name = 'web';
     $user->save();
     
     $user = User::create([
@@ -37,7 +35,7 @@ class UsersTableSeeder extends Seeder
       'password' => bcrypt('admin'),
     ]);
 
-    $user->attachRole($admin);
+    $user->assignRole('admin');
     
     $user = User::create([
       'first_name' => 'User',
@@ -45,6 +43,6 @@ class UsersTableSeeder extends Seeder
       'email' => 'user@example.com',
       'password' => bcrypt('user'),
     ]);
-    $user->attachRole($user);
+    $user->assignRole('user');
   }
 }
